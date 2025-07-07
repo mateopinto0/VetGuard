@@ -44,7 +44,8 @@ footer{
     align-items: center;
     flex-direction: row;
     width: 100%;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    overflow: hidden;
     background: linear-gradient(to bottom right, #011b19, #132c27, #1c6e6e);
 }
 #logo{
@@ -64,6 +65,7 @@ main{
     align-items: center;
     justify-content: left;
     background-position: center;
+    margin-top: 5em;
 }
 
 #about{
