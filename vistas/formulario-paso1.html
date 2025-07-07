@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/formulario.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<link rel="stylesheet" href="../css/estilo-principal.css">
+
+    <title>Turno</title>
+</head>
+<body>
+    <div class="contenedor">
+    <div style="margin: 2em;">
+        <h1>1. Seleccion de mascota</h1>
+        <p>A continuacion seleccione el tipo de su mascota</p>
+    </div>
+    <div class="w3-row-padding w3-center" id="contenedor-mascotas" style="gap: 6px;">
+
+    <div class="w3-quarter">
+      <div class="w3-card w3-padding w3-hover-shadow w3-round-large opcion-mascota" data-mascota="perro">
+        <i class="fa fa-dog w3-jumbo"></i>
+        <p>Perro</p>
+        <i class="fa fa-check-circle w3-text-green w3-xxlarge icono-check" style="display:none;"></i>
+      </div>
+    </div>
+
+    <div class="w3-quarter">
+      <div class="w3-card w3-padding w3-hover-shadow w3-round-large opcion-mascota" data-mascota="gato">
+        <i class="fa fa-cat w3-jumbo "></i>
+        <p>Gato</p>
+        <i class="fa fa-check-circle w3-text-green w3-xxlarge icono-check" style="display:none;"></i>
+      </div>
+    </div>
+
+    <div class="w3-quarter">
+      <div class="w3-card w3-padding w3-hover-shadow w3-round-large opcion-mascota" data-mascota="ave">
+        <i class="fa fa-dove w3-jumbo "></i>
+        <p>Ave</p>
+        <i class="fa fa-check-circle w3-text-green w3-xxlarge icono-check" style="display:none;"></i>
+      </div>
+    </div>
+
+   <div class="w3-quarter">
+        <div class="w3-card w3-padding w3-hover-shadow w3-round-large opcion-mascota" data-mascota="roedor">
+            <i class="fa-solid fa-paw w3-jumbo"></i>
+                <p>Roedor</p>
+            <i class="fa-solid fa-check-circle w3-text-green w3-xxlarge icono-check" style="display:none;"></i>
+        </div>
+    </div>
+  </div>
+
+    <div class="w3-flex w3-center" id="botones">
+        <a href="../index.html" class="w3-btn w3-round-xxlarge w3-text-white" >Volver</a>
+        <a href="../index.html" class="w3-btn w3-round-xxlarge w3-text-white" >Siguiente</a>
+    </div>
+</div>
+    <script>
+  const opciones = document.querySelectorAll('.opcion-mascota');
+
+  opciones.forEach(card => {
+    card.addEventListener('click', () => {
+      // Quitar selección anterior
+      opciones.forEach(c => {
+        c.classList.remove('w3-border', 'w3-border-green');
+        c.querySelector('.icono-check').style.display = 'none';
+      });
+
+      // Marcar esta como seleccionada
+      card.classList.add('w3-border', 'w3-border-green');
+      card.querySelector('.icono-check').style.display = 'inline-block';
+
+      const seleccion = card.getAttribute('data-mascota');
+      console.log("Seleccionaste: " + seleccion);
+    });
+  });
+</script>
+
+</body>
+</html>

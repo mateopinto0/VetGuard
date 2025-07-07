@@ -1,0 +1,91 @@
+.opcion-mascota {
+  position: relative;
+}
+
+.icono-check {
+   position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #00ffcc;
+  font-size: 1.5em;
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background: linear-gradient(to bottom right, #011b19, #132c27, #1c6e6e);
+}
+
+
+.contenedor{
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    margin-top: 5em;
+    flex-direction: column;
+    color: white;
+    gap: 2em;
+    /*background: linear-gradient(to bottom right, #011b19, #132c27, #1c6e6e);*/
+}
+
+.w3-card{
+    background-color: #1c6e6e;
+    cursor: pointer;
+}
+
+#botones{
+    
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-top: 4em;
+}
+
+#botones a{
+    width: 30%;
+    background-color:#011b19;
+
+}
+
+#botones a:hover{
+    transition: 0.2s;
+    border: 1px solid white;
+}
+
+#contenedor-mascotas{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+@media screen and (max-width: 500px) {
+    
+    body{
+        font-size: 80%;
+    }
+
+    #botones{
+        padding: 1em;
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    #botones a{
+        width: 80%;
+    }
+    #contenedor-mascotas{
+       flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width:500px) and (max-width:680px) {
+    #botones{
+        padding: 1em;
+        gap: 1em;
+    }
+
+    #contenedor-mascotas{
+       flex-wrap: nowrap;
+    }
+
+}
