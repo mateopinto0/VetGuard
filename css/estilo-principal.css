@@ -20,13 +20,19 @@ body{
 nav a{
     text-decoration: none;
     color: white;
+    font-weight: 500;
+    padding: 0.5em 1em;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
 }
 
-nav a:hover{
-    color: #215B4A;
-   background-color: white;
-   border-radius: 4em;
-    transition: 0.2s;
+nav a:hover {
+    color: #ffffff;
+    background-color: #215B4A;
+    border-radius: 2em;
+    text-shadow: 0 0 5px #3cfcb1;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.07);
 }
 
 footer{
@@ -38,19 +44,29 @@ footer{
 }
 
 .header{
+    padding: 1.2em 3em;
     display: flex;
     position: fixed;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     flex-direction: row;
     width: 100%;
     flex-wrap: nowrap;
     overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     background: linear-gradient(to bottom right, #011b19, #132c27, #1c6e6e);
 }
 #logo{
-    width: 6em;
+    width: 8em;
+    max-width: 100%;
+    height: auto;
 }
+
+.w3-bar a{
+    margin-left: 1.5em;
+    font-size: 1.2em;
+}
+
 
 img{
     width: 300px;
@@ -67,6 +83,85 @@ main{
     background-position: center;
     margin-top: 5em;
 }
+
+.main-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5em 8em;
+  background: url("../img/FONDO_VETGUARD.svg");
+  background-size: cover;
+  background-position: center;
+  min-height: 90vh;
+  color: white;
+  gap: 3em;
+}
+
+.main-left {
+  flex: 1;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1em;
+}
+
+.main-left h1 {
+  font-size: 5rem;
+  font-weight: 800;
+  margin-bottom: 0.3em;
+  color: white;
+  text-shadow: 1px 1px 8px #0b1d17;
+  text-align: center;
+}
+
+.centered-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6em; 
+}
+
+.main-left p {
+  font-size: 2rem;
+  margin-bottom: 1.5em; 
+  margin-top: -0.5em;
+  color: #e0f7f1;
+}
+
+.main-left a {
+  background-color: #0b1d17;
+  color: white;
+  padding: 1em 2.5em;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 2em;
+  box-shadow: 0 4px 10px rgba(11, 29, 23, 0.6);
+  transition: all 0.3s ease-in-out;
+  align-self: flex-start; /* aseguramos que se alinee con el texto */
+}
+
+.main-left a:hover {
+  background-color: #215B4A;
+  color: #ffffff;
+  transform: scale(1.05);
+  text-shadow: 0 0 8px #3cfcb1;
+}
+
+.main-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-right img {
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(0 0 20px rgba(0,0,0,0.5));
+}
+
 
 #logo-url:hover{
     border: none;
@@ -88,3 +183,4 @@ main{
         width: 7em;
     }
 }
+
