@@ -67,7 +67,6 @@ footer{
     font-size: 1.2em;
 }
 
-
 img{
     width: 300px;
 }
@@ -99,11 +98,11 @@ main{
 
 .main-left {
   flex: 1;
-  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 1em;
+  width: 50%;
 }
 
 .main-left h1 {
@@ -113,13 +112,6 @@ main{
   color: white;
   text-shadow: 1px 1px 8px #0b1d17;
   text-align: center;
-}
-
-.centered-group {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.6em; 
 }
 
 .main-left p {
@@ -139,27 +131,13 @@ main{
   border-radius: 2em;
   box-shadow: 0 4px 10px rgba(11, 29, 23, 0.6);
   transition: all 0.3s ease-in-out;
-  align-self: flex-start; /* aseguramos que se alinee con el texto */
+  align-self: flex-start;
 }
 
 .main-left a:hover {
   background-color: #215B4A;
   color: #ffffff;
   transform: scale(1.05);
-  text-shadow: 0 0 8px #3cfcb1;
-}
-
-.main-right {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.main-right img {
-  max-width: 100%;
-  height: auto;
-  filter: drop-shadow(0 0 20px rgba(0,0,0,0.5));
 }
 
 

@@ -26,7 +26,6 @@ body, html {
     flex-direction: column;
     color: white;
     gap: 2em;
-    /*background: linear-gradient(to bottom right, #011b19, #132c27, #1c6e6e);*/
 }
 
 .w3-card{
@@ -56,7 +55,80 @@ body, html {
 #contenedor-mascotas{
     display: flex;
     flex-wrap: nowrap;
+    margin-left: 1em;
+    margin-right: 1em;
 }
+
+.bloque-pasos {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 2em;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 1em;
+  margin-top: 2em;
+  margin-right: 2em;
+  margin-left: 2em;
+}
+
+.barra-pasos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5em;
+  margin-bottom: 1em;
+  flex-wrap: nowrap;
+}
+
+.paso-item.activo {
+  background-color: #00ffcc;
+  color: #011b19;
+  font-weight: bold;
+}
+
+.linea {
+  height: 2px;
+  background-color: #ccc;
+  flex-grow: 1;
+  opacity: 0.5;
+}
+
+.paso-item {
+  background-color: #264e4b;
+  color: #ccc;
+  padding: 0.6em 1.2em;
+  border-radius: 2em;
+  font-size: 1rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.barra-pasos .paso {
+  padding: 0.5em 1em;
+  border-radius: 2em;
+  background-color: #264e4b;
+  opacity: 0.6;
+}
+
+.barra-pasos .activo {
+  background-color: #00ffcc;
+  color: #011b19;
+  font-weight: bold;
+  opacity: 1;
+}
+
+.bloque-titulo h1 {
+  font-size: 3rem;
+  margin-bottom: 0.2em;
+  color: #ffffff;
+}
+
+.bloque-titulo p {
+  font-size: 1.5rem;
+  color: #d3f3ec;
+}
+
 
 @media screen and (max-width: 500px) {
     

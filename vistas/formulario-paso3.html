@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/formulario.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
+  <link rel="stylesheet" href="../css/estilo-principal.css" />
+  <title>Turno - Fecha y Hora</title>
+</head>
+<body>
+  <div class="contenedor">
+    <div class="bloque-pasos">
+      <div class="barra-pasos">
+        <div class="paso-item">
+          <span>1. Selección de mascota</span>
+        </div>
+        <div class="linea"></div>
+        <div class="paso-item">
+          <span>2. Datos del cliente</span>
+        </div>
+        <div class="linea"></div>
+        <div class="paso-item activo">
+          <span>3. Fecha y hora</span>
+        </div>
+        <div class="linea"></div>
+        <div class="paso-item">
+          <span>4. Especialista</span>
+        </div>
+      </div>
+
+      <div class="bloque-titulo">
+        <h1>3. Fecha y hora</h1>
+        <p>Elegí el horario y visítanos</p>
+      </div>
+    </div>
+
+    <form class="w3-container w3-padding" id="form-fecha-hora">
+      <div class="w3-row-padding" style="margin-top: 1em;">
+        <div class="w3-half w3-margin-bottom">
+          <label class="w3-text-white">Fecha</label>
+          <input class="w3-input w3-round-large" type="date" name="fecha" required />
+        </div>
+        <div class="w3-half w3-margin-bottom">
+          <label class="w3-text-white">Hora</label>
+          <input class="w3-input w3-round-large" type="time" name="hora" required />
+        </div>
+      </div>
+    </form>
+
+    <div class="w3-flex w3-center" id="botones">
+      <a href="formulario-paso2.html" class="w3-btn w3-round-xxlarge w3-text-white">Volver</a>
+      <a href="formulario-paso4.html" class="w3-btn w3-round-xxlarge w3-text-white">Siguiente</a>
+    </div>
+  </div>
+</body>
+</html>

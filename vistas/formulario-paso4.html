@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/formulario.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
+  <link rel="stylesheet" href="../css/estilo-principal.css" />
+  <title>Turno - Especialista</title>
+</head>
+<body>
+  <div class="contenedor">
+    <div class="bloque-pasos">
+      <div class="barra-pasos">
+        <div class="paso-item">
+          <span>1. Selección de mascota</span>
+        </div>
+        <div class="linea"></div>
+        <div class="paso-item">
+          <span>2. Datos del cliente</span>
+        </div>
+        <div class="linea"></div>
+        <div class="paso-item">
+          <span>3. Fecha y hora</span>
+        </div>
+        <div class="linea"></div>
+        <div class="paso-item activo">
+          <span>4. Especialista</span>
+        </div>
+      </div>
+
+      <div class="bloque-titulo">
+        <h1>4. Especialista</h1>
+        <p>Elegí el especialista que querés que atienda a tu mascota</p>
+      </div>
+    </div>
+
+    <div class="w3-row-padding w3-center" style="gap: 6px;" id="contenedor-especialistas">
+      <div class="w3-third">
+        <div class="w3-card w3-padding w3-hover-shadow w3-round-large opcion-especialista" data-especialista="dr_fernandez">
+          <i class="fa-solid fa-user-doctor w3-jumbo"></i>
+          <p>Dr. Fernández</p>
+          <i class="fa fa-check-circle w3-text-green w3-xxlarge icono-check" style="display: none;"></i>
+        </div>
+      </div>
+
+      <div class="w3-third">
+        <div class="w3-card w3-padding w3-hover-shadow w3-round-large opcion-especialista" data-especialista="dra_gomez">
+          <i class="fa-solid fa-user-doctor w3-jumbo"></i>
+          <p>Dra. Gómez</p>
+          <i class="fa fa-check-circle w3-text-green w3-xxlarge icono-check" style="display: none;"></i>
+        </div>
+      </div>
+
+      <div class="w3-third">
+        <div class="w3-card w3-padding w3-hover-shadow w3-round-large opcion-especialista" data-especialista="dr_perez">
+          <i class="fa-solid fa-user-doctor w3-jumbo"></i>
+          <p>Dr. Pérez</p>
+          <i class="fa fa-check-circle w3-text-green w3-xxlarge icono-check" style="display: none;"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-flex w3-center" id="botones">
+      <a href="formulario-paso3.html" class="w3-btn w3-round-xxlarge w3-text-white">Volver</a>
+      <a href="../index.html" class="w3-btn w3-round-xxlarge w3-text-white">Confirmar</a>
+    </div>
+  </div>
+
+  <script>
+    const especialistas = document.querySelectorAll('.opcion-especialista');
+
+    especialistas.forEach(card => {
+      card.addEventListener('click', () => {
+        especialistas.forEach(c => {
+          c.classList.remove('w3-border', 'w3-border-green');
+          c.querySelector('.icono-check').style.display = 'none';
+        });
+
+        card.classList.add('w3-border', 'w3-border-green');
+        card.querySelector('.icono-check').style.display = 'inline-block';
+
+        const seleccion = card.getAttribute('data-especialista');
+        console.log("Seleccionaste especialista: " + seleccion);
+      });
+    });
+  </script>
+</body>
+</html>
