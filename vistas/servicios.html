@@ -1,122 +1,139 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>W3.CSS Template</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Servicios</title>
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="../css/estilo-principal.css">
+  <title>W3.CSS Template</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Servicios</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/estilo-principal.css">
 </head>
+
 <body>
-<!-- Navbar -->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-card" id="myNavbar">
-    <a href="#home" class="w3-bar-item w3-button w3-wide">
-            <img src="../img/Simplification.svg" alt="logo" id="logo">
-    </a>
-    <!-- Right-sided navbar links -->
-    <div class="w3-right w3-hide-small">
-      <a href="../index.html" class="w3-bar-item w3-button"><i class="fa fa-home"></i>Home</a>
-      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-paw"></i>Servicios</a>
-      <a href="#Emergencias" class="w3-bar-item w3-button"><i class="fa fa-plus-square"></i>Emergencias</a>
-      <a href="#Turnos" class="w3-bar-item w3-button"><i class="fa fa-th"></i> Turnos</a>
-      <a href="#Preguntas frecuentes" class="w3-bar-item w3-button"><i class="fa fa-comment"></i> Preguntas frecuentes</a>
-      <a href="#Contacto" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> Contacto</a>
-    </div>
-    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
-      <i class="fa fa-bars"></i>
-    </a>
-  </div>
-</div>
-
-<!-- Sidebar on small screens when clicking the menu icon -->
-<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close �</a>
-  <a href="../index.html" onclick="w3_close()" class="w3-bar-item w3-button">Home</a>
-  <a href="#Servicios" onclick="w3_close()" class="w3-bar-item w3-button">Servicios</a>
-  <a href="#Emergencias" onclick="w3_close()" class="w3-bar-item w3-button">Emergencias</a>
-  <a href="#Turnos" onclick="w3_close()" class="w3-bar-item w3-button">Turnos</a>
-  <a href="#>Preguntas frecuentes" onclick="w3_close()" class="w3-bar-item w3-button">Preguntas frecuentes</a>
-  <a href="#Contacto" onclick="w3_close()" class="w3-bar-item w3-button">Contacto</a>
-</nav>
-
-<!-- Servicios -->
-<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
-   <div class="w3-center text-tit-serv">Servicios pensados con amor para cada mascota</div>
-  <!-- First Photo Grid-->
-  <div class="w3-row-padding w3-padding-16 w3-center" id="food">
-    <div class="w3-quarter">
-      <img src="../img/Emergencia.jpg" alt="Emergencia" style="width:100%" class="imagen-con-sombra">
-      <h4>Atención Veterinaria 24/7 </h4>
-      <p class="text-left text-det-serv">Brindamos atención médica veterinaria a toda hora, todos los días del año. Ya sea una consulta de rutina o una emergencia inesperada, estamos listos para cuidar de tu mascota con compromiso, empatía y profesionalismo.</p>
-    </div>
-    <div class="w3-quarter">
-      <img src="../img/Vacuna.jpg" alt="Vacuna" style="width:100%" class="imagen-con-sombra">
-      <h4>Vacunación</h4>
-      <p class="text-left text-det-serv">La prevención es la clave para una vida larga y saludable. Contamos con un calendario completo de vacunación y planes preventivos personalizados para proteger a tu mascota contra enfermedades comunes y peligrosas.</p>
-    </div>
-    <div class="w3-quarter">
-      <img src="../img/radiografia.jpg" alt="radiografia" style="width:100%" class="imagen-con-sombra">
-      <h4>Diagnóstico por imagen</h4>
-      <p class="text-left text-det-serv">Disponemos de tecnología de diagnóstico por imagen que nos permite detectar y evaluar con precisión distintas afecciones. Realizamos estudios como radiografías y ecografías de forma rápida y segura, incluso durante emergencias.</p>
-    </div>
-    <div class="w3-quarter">
-      <img src="../img/laboratorio.png" alt="laboratorio" style="width:100%" class="imagen-con-sombra">
-      <h4>Laboratorio clínico</h4>
-      <p class="text-left text-det-serv">Contamos con laboratorio propio para análisis clínicos, lo que nos permite obtener resultados en el momento y tomar decisiones rápidas en casos urgentes. Realizamos estudios de sangre, orina y otros análisis esenciales para un diagnóstico completo. </p>
+  <!-- Navbar -->
+  <div class="w3-top">
+    <div class="w3-bar w3-white w3-card" id="myNavbar">
+      <a href="#home" class="w3-bar-item w3-button w3-wide">
+        <img src="../img/simplification.svg" alt="logo" id="logo">
+      </a>
+      <!-- Right-sided navbar links -->
+      <div class="w3-right w3-hide-small">
+        <a href="../index.html" class="w3-bar-item w3-button"><i class="fa fa-home"></i>Home</a>
+        <a href="#" class="w3-bar-item w3-button"><i class="fa fa-paw"></i>Servicios</a>
+        <a href="#Emergencias" class="w3-bar-item w3-button"><i class="fa fa-plus-square"></i>Emergencias</a>
+        <a href="#Turnos" class="w3-bar-item w3-button"><i class="fa fa-th"></i> Turnos</a>
+        <a href="#Preguntas frecuentes" class="w3-bar-item w3-button"><i class="fa fa-comment"></i> Preguntas
+          frecuentes</a>
+        <a href="#Contacto" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> Contacto</a>
+      </div>
+      <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+        onclick="w3_open()">
+        <i class="fa fa-bars"></i>
+      </a>
     </div>
   </div>
-</div>
 
-<!-- Footer -->
-<footer class="w3-center w3-black padding-footer">
-  <div class="w3-row-padding w3-center text-left row-padding-footer">
-    <div class="w3-half ">
-      <i class="w3-margin-bottom w3-center"></i>
-      <p class="w3-large"> Contacto</p>
-      <p class="w3-large"> Atencion whatsapp: 1163306976</p>
-      <p class="w3-large"> Correo electronico: vetguard@gmail.com</p>
-    </div>
-    <div class="w3-half ">
-      <i class="w3-margin-bottom "></i>
-      <p class="w3-large">Como llegar</p>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.364333976803!2d-58.565385488449046!3d-34.670753160929074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc62cc3ef7083%3A0x8867107f425fade5!2sUniversidad%20Nacional%20de%20La%20Matanza!5e0!3m2!1ses!2sar!4v1751745772411!5m2!1ses!2sar" width="90%" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-           </iframe>
-           <p>Direccion: Florencio varela 1903</p>
-           <p>© VetGuard 2025 v1.0 Todos los derechos reservados.</p>
-    </div>
-    </div>
-    
-</footer>
- 
-<script>
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
-// Toggle between showing and hiding the sidebar when clicking the menu icon
-var mySidebar = document.getElementById("mySidebar");
+  <!-- Sidebar on small screens when clicking the menu icon -->
+  <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large"
+    style="display:none" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close �</a>
+    <a href="../index.html" onclick="w3_close()" class="w3-bar-item w3-button">Home</a>
+    <a href="#Servicios" onclick="w3_close()" class="w3-bar-item w3-button">Servicios</a>
+    <a href="#Emergencias" onclick="w3_close()" class="w3-bar-item w3-button">Emergencias</a>
+    <a href="#Turnos" onclick="w3_close()" class="w3-bar-item w3-button">Turnos</a>
+    <a href="#>Preguntas frecuentes" onclick="w3_close()" class="w3-bar-item w3-button">Preguntas frecuentes</a>
+    <a href="#Contacto" onclick="w3_close()" class="w3-bar-item w3-button">Contacto</a>
+  </nav>
 
-function w3_open() {
-  if (mySidebar.style.display === 'block') {
-    mySidebar.style.display = 'none';
-  } else {
-    mySidebar.style.display = 'block';
-  }
-}
+  <!-- Servicios -->
+  <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+    <div class="w3-center text-tit-serv">Servicios pensados con amor para cada mascota</div>
+    <!-- First Photo Grid-->
+    <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+      <div class="w3-quarter">
+        <img src="../img/emergencia.jpg" alt="Emergencia" style="width:100%" class="imagen-con-sombra">
+        <h4>Atención Veterinaria 24/7 </h4>
+        <p class="text-left text-det-serv">Brindamos atención médica veterinaria a toda hora, todos los días del año. Ya
+          sea una consulta de rutina o una emergencia inesperada, estamos listos para cuidar de tu mascota con
+          compromiso, empatía y profesionalismo.</p>
+      </div>
+      <div class="w3-quarter">
+        <img src="../img/vacuna.jpg" alt="Vacuna" style="width:100%" class="imagen-con-sombra">
+        <h4>Vacunación</h4>
+        <p class="text-left text-det-serv">La prevención es la clave para una vida larga y saludable. Contamos con un
+          calendario completo de vacunación y planes preventivos personalizados para proteger a tu mascota contra
+          enfermedades comunes y peligrosas.</p>
+      </div>
+      <div class="w3-quarter">
+        <img src="../img/radiografia.jpg" alt="radiografia" style="width:100%" class="imagen-con-sombra">
+        <h4>Diagnóstico por imagen</h4>
+        <p class="text-left text-det-serv">Disponemos de tecnología de diagnóstico por imagen que nos permite detectar y
+          evaluar con precisión distintas afecciones. Realizamos estudios como radiografías y ecografías de forma rápida
+          y segura, incluso durante emergencias.</p>
+      </div>
+      <div class="w3-quarter">
+        <img src="../img/laboratorio.png" alt="laboratorio" style="width:100%" class="imagen-con-sombra">
+        <h4>Laboratorio clínico</h4>
+        <p class="text-left text-det-serv">Contamos con laboratorio propio para análisis clínicos, lo que nos permite
+          obtener resultados en el momento y tomar decisiones rápidas en casos urgentes. Realizamos estudios de sangre,
+          orina y otros análisis esenciales para un diagnóstico completo. </p>
+      </div>
+    </div>
+  </div>
 
-// Close the sidebar with the close button
-function w3_close() {
-    mySidebar.style.display = "none";
-}
-</script>
+  <!-- Footer -->
+  <footer class="w3-center w3-black padding-footer">
+    <div class="w3-row-padding w3-center text-left row-padding-footer">
+      <div class="w3-half ">
+        <i class="w3-margin-bottom w3-center"></i>
+        <p class="w3-large"> Contacto</p>
+        <p class="w3-large"> Atencion whatsapp: 1163306976</p>
+        <p class="w3-large"> Correo electronico: vetguard@gmail.com</p>
+      </div>
+      <div class="w3-half ">
+        <i class="w3-margin-bottom "></i>
+        <p class="w3-large">Como llegar</p>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.364333976803!2d-58.565385488449046!3d-34.670753160929074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc62cc3ef7083%3A0x8867107f425fade5!2sUniversidad%20Nacional%20de%20La%20Matanza!5e0!3m2!1ses!2sar!4v1751745772411!5m2!1ses!2sar"
+          width="90%" height="150" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        <p>Direccion: Florencio varela 1903</p>
+        <p>© VetGuard 2025 v1.0 Todos los derechos reservados.</p>
+      </div>
+    </div>
+
+  </footer>
+
+  <script>
+    // Modal Image Gallery
+    function onClick(element) {
+      document.getElementById("img01").src = element.src;
+      document.getElementById("modal01").style.display = "block";
+      var captionText = document.getElementById("caption");
+      captionText.innerHTML = element.alt;
+    }
+    // Toggle between showing and hiding the sidebar when clicking the menu icon
+    var mySidebar = document.getElementById("mySidebar");
+
+    function w3_open() {
+      if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+      } else {
+        mySidebar.style.display = 'block';
+      }
+    }
+
+    // Close the sidebar with the close button
+    function w3_close() {
+      mySidebar.style.display = "none";
+    }
+  </script>
 
 </body>
+
 </html>

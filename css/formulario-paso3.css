@@ -12,8 +12,7 @@ body, html {
   flex-direction: column;
   width: 100%;
   min-height: 100vh;
-  margin-top: 5em;
-  gap: 2em;
+  gap: 3.70em;
 }
 
 /* Bloque de pasos */

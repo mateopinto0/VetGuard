@@ -10,10 +10,9 @@ body, html {
   display: flex;
   width: 100%;
   min-height: 100vh;
-  margin-top: 5em;
   flex-direction: column;
   color: white;
-  gap: 2em;
+  gap: 4.25em;
 }
 
 .bloque-pasos {
@@ -142,11 +141,11 @@ body, html {
   backdrop-filter: blur(5px);
   border: 1px solid #00ffcc40;
   transition: 0.3s;
-  color: white;
   text-align: center;
-  padding: 0.6em 1em;
-  text-decoration: none;
+  padding: 0.8em 1.5em;
   border-radius: 2em;
+  color: white;
+  text-decoration: none;
 }
 
 #botones a:hover {

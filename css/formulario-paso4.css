@@ -13,9 +13,8 @@ body, html {
   display: flex;
   width: 100%;
   min-height: 100vh;
-  margin-top: 5em;
   flex-direction: column;
-  gap: 2em;
+  gap: 3em;
 }
 
 /* Bloque de pasos */
@@ -180,10 +179,10 @@ body, html {
   border: 1px solid #00ffcc40;
   color: white;
   text-align: center;
-  padding: 0.6em 1em;
+  padding: 0.8em 0;
   border-radius: 2em;
   text-decoration: none;
-  transition: 0.3s ease;
+  transition: 0.3s;
 }
 
 #botones a:hover {
