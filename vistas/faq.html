@@ -7,26 +7,44 @@
     <title>VetGuard - FAQ</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
     <link rel="stylesheet" href="../css/estilo-principal.css">
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<div class="contenedor">
+</head>
+<body>
+<div class="contenedor" id="top">
     <header class="header">
-        <div class="w3-container">
-            <a href="../index.html"><img src="../img/simplification.svg" alt="logo" id="logo"></a>
-        </div>
-        <div>
-            <nav class="w3-bar">
-                <a href="../index.html" class="w3-bar-item w3-mobile">Inicio</a>
-                <a href="../vistas/servicios.html" class="w3-bar-item w3-mobile">Servicios</a>
-                <a href="" class="w3-bar-item w3-mobile">Emergencias</a>
-                <a href="../vistas/formulario-paso1.html" class="w3-bar-item w3-mobile">Turnos</a>
-                <a href="../vistas/faq.html" class="w3-bar-item w3-mobile">Preguntas frecuentes</a>
-                <a href="#contacto" class="w3-bar-item w3-mobile">Contacto</a>
-            </nav>
-        </div>
+      <div class="w3-container">
+        <a href="#top"><img src="../img/simplification.svg" alt="logo" id="logo"></a>
+      </div>
+      <div id="barra">
+        <nav class="w3-bar">
+          <a href="../index.html" class="w3-bar-item w3-mobile">Inicio</a>
+          <a href="./servicios.html" class="w3-bar-item w3-mobile">Servicios</a>
+          <a href="#" class="w3-bar-item w3-mobile">Emergencias</a>
+          <a href="./formulario-paso1.html" class="w3-bar-item w3-mobile">Turnos</a>
+          <a href="./faq.html" class="w3-bar-item w3-mobile">Preguntas frecuentes</a>
+          <a href="#contacto" class="w3-bar-item w3-mobile">Contacto</a>
+        </nav>
+      </div>
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+        onclick="w3_open()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </div>
+     <nav class="w3-sidebar w3-bar-block w3-card w3-animate-right w3-hide-medium w3-hide-large"
+    style="display:none; right: 0;" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Cerrar</a>
+    <a href="../index.html" onclick="w3_close()" class="w3-bar-item w3-button">Inicio</a>
+    <a href="./servicios.html" onclick="w3_close()" class="w3-bar-item w3-button">Servicios</a>
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">Emergencias</a>
+    <a href="./formulario-paso1.html" onclick="w3_close()" class="w3-bar-item w3-button">Turnos</a>
+    <a href="./faq.html" onclick="w3_close()" class="w3-bar-item w3-button">Preguntas frecuentes</a>
+    <a href="#contacto" onclick="w3_close()" class="w3-bar-item w3-button">Contacto</a>
+  </nav>
     </header>
 
-    <body>
+
         <div class="preguntas-frecuentes">
             <div class="intro">
                 <h1>Preguntas frecuentes</h1>
@@ -36,7 +54,7 @@
 
             <h3>Turnos y Atención</h3>
 
-            <details class="pregunta">
+            <details class="pregunta w3-text-white">
                 <summary class="titulo-pregunta">¿Cómo saco un turno?</summary>
                 <ul class="respuesta-pregunta">
                     <p>Para agendar un turno con nosotros, ingresa a <a
@@ -46,7 +64,7 @@
                 </ul>
             </details>
 
-            <details class="pregunta">
+            <details class="pregunta w3-text-white">
                 <summary class="titulo-pregunta">¿Puedo cancelar o reprogramar un turno?</summary>
                 <ul class="respuesta-pregunta">
                     <p>Sí, para hacerlo comunícate a nuestro <a href="https://web.whatsapp.com/">WhatsApp</a> y bríndale
@@ -59,7 +77,7 @@
                 </ul>
             </details>
 
-            <details class="pregunta">
+            <details class="pregunta w3-text-white">
                 <summary class="titulo-pregunta">¿Atienden urgencias sin turno?</summary>
                 <ul class="respuesta-pregunta">
                     <p>Sí, siempre que tengas una emergencia médica, podés a acercarte a nuestra <a
@@ -70,7 +88,7 @@
 
             <h3>Servicios y Profesionales</h3>
 
-            <details class="pregunta">
+            <details class="pregunta w3-text-white">
                 <summary class="titulo-pregunta">¿Qué servicios ofrecen?</summary>
                 <ul class="respuesta-pregunta">
                     <p>Podés ver todos los servicios con los que contamos entrando a nuestro apartado de <a
@@ -78,7 +96,7 @@
                 </ul>
             </details>
 
-            <details class="pregunta">
+            <details class="pregunta w3-text-white">
                 <summary class="titulo-pregunta">¿Atienden animales exóticos o solo perros y gatos?</summary>
                 <ul class="respuesta-pregunta">
                     <p>Además de servicio para perros y gatos, brindamos atención tanto a aves como roedores.</p>
@@ -87,7 +105,7 @@
 
             <h3>Vacunación y Documentación</h3>
 
-            <details class="pregunta">
+            <details class="pregunta w3-text-white">
                 <summary class="titulo-pregunta">¿Qué vacunas debe tener mi mascota para atenderse?</summary>
                 <ul class="respuesta-pregunta">
                     <p>Si tu mascota es un perro o un gato de más de 3 meses, requiere la vacuna antirrábica para ser
@@ -98,7 +116,7 @@
                 </ul>
             </details>
 
-            <details class="pregunta">
+            <details class="pregunta w3-text-white">
                 <summary class="titulo-pregunta">¿Es necesario llevar el carnet de vacunación?</summary>
                 <ul class="respuesta-pregunta">
                     <p>Sí, necesitamos saber que tus mascotas cumplen con los requisitos para ser atendidos y también
@@ -108,7 +126,7 @@
 
             <h3>Pagos</h3>
 
-            <details class="pregunta">
+            <details class="pregunta w3-text-white">
                 <summary class="titulo-pregunta">¿Qué medios de pago aceptan?</summary>
                 <ul class="respuesta-pregunta">
                     <p>Contamos con la posibilidad de pago a través de efectivo, transferencia bancaria y tarjetas de
@@ -116,7 +134,7 @@
                 </ul>
             </details>
 
-            <details class="pregunta">
+            <details class="pregunta w3-text-white">
                 <summary class="titulo-pregunta">¿Aceptan obras sociales veterinarias o seguros?</summary>
                 <ul class="respuesta-pregunta">
                     <p>Actualmente, no trabajamos con obras sociales veterinarias ni seguros. Sin embargo, podés
@@ -129,7 +147,7 @@
 
             <h3>Mascotas</h3>
 
-            <details class="pregunta">
+            <details class="pregunta w3-text-white">
                 <summary class="titulo-pregunta">¿Puedo llevar más de una mascota al mismo turno?</summary>
                 <ul class="respuesta-pregunta">
                     <p>No, los turnos que otorgamos son individuales a cada mascota.</p>
@@ -137,7 +155,7 @@
             </details>
 
 
-            <details class="pregunta">
+            <details class="pregunta w3-text-white">
                 <summary class="titulo-pregunta">¿Puedo quedarme con mi mascota durante la consulta?</summary>
                 <ul class="respuesta-pregunta">
                     <p>Dependiendo del procedimiento que se le vaya a realizar a tu mascota, tu presencia podría ser
@@ -147,7 +165,7 @@
                 </ul>
             </details>
 
-            <details class="pregunta">
+            <details class="pregunta w3-text-white">
                 <summary class="titulo-pregunta">¿Qué hago si mi mascota es agresiva o se pone muy nerviosa durante la
                     consulta?</summary>
                 <ul class="respuesta-pregunta">
@@ -161,7 +179,7 @@
 
             <h3>Cuidados</h3>
 
-            <details class="pregunta">
+            <details class="pregunta w3-text-white">
                 <summary class="titulo-pregunta">¿Debo bañar a mi mascota antes de la consulta?</summary>
                 <ul class="respuesta-pregunta">
                     <p>Aunque no es necesario salvo casos de suciedad extrema (ej. barro), valoramos el hecho de que te
@@ -170,7 +188,7 @@
                 </ul>
             </details>
 
-            <details class="pregunta">
+            <details class="pregunta w3-text-white">
                 <summary class="titulo-pregunta">¿Qué debo llevar a una primera consulta?</summary>
                 <ul class="respuesta-pregunta">
                     <p>Ante una eventual consulta, te pedimos que traigas:
@@ -192,7 +210,7 @@
                 </ul>
             </details>
         </div>
-    </body>
+    
 
     <footer class="footer w3-text-white" id="contacto">
         <div class="contacto">
@@ -213,5 +231,14 @@
         </div>
     </footer>
 </div>
+<script>
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+    </body>
 </html>
