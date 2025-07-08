@@ -4,6 +4,10 @@
     box-sizing: border-box;
     font-family: "Raleway", sans-serif;
 }
+html {
+    font-size: 100%; /* En desktop */
+}
+
 
 .contenedor {
     display: flex;
@@ -70,7 +74,8 @@ background-position: 10em -11em;
     color: white;
 }
 
-@media screen and (max-width: 992px) {
+
+@media screen and (max-width: 992px) and (min-width:600px){
     .main-hero {
         padding: 3em 5em;
         margin-top: 5em;
@@ -86,7 +91,8 @@ background-position: 10em -11em;
    
 
     h1,h2,h3,h4,h5{
-       font-size: 30px;
+       font-size: 1.6rem;
+
     }
 
 }
@@ -107,7 +113,9 @@ background-position: 10em -11em;
 }
 
 .main-left h1 {
-    font-size: 4.5rem;
+    
+    font-size: clamp(2rem, 8vw, 4.5rem);
+
     font-weight: 800;
     text-shadow: 1px 1px 8px #0b1d17;
 }
@@ -137,8 +145,7 @@ background-position: 10em -11em;
 footer {
     display: flex;
     padding: 1em;
-    justify-content: center;
-    gap: 3em;
+    justify-content: space-around;
     background-color: #0b1d17;
 }
 
@@ -207,7 +214,21 @@ footer {
     color: white;
 }
 
+.redes a {
+  margin-right: 1em;
+  color: white;
+  text-decoration: none;
+}
+
+.redes a:hover {
+  color: #3cfcb1;
+}
+
 @media screen and (max-width:600px) {
+
+    html {
+        font-size: 87.5%; /* Reduce tamaño base */
+    }
 
     body {
         font-size: 75%;
@@ -224,10 +245,10 @@ footer {
        font-size: 25px;
     }
 
-    .main-left h1{
-        
-        font-size: 400%;
+    .main-left h1 {
+        font-size: 2.2rem;
     }
+
 
     .main-hero{
         background-position: center;
@@ -240,4 +261,12 @@ footer {
     #contenedor-servicios img{
         width: 70%;
     }
+     .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  
 }
+
