@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../css/formulario.css" />
+  <link rel="stylesheet" href="../css/formulario-paso2.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
   <link rel="stylesheet" href="../css/estilo-principal.css" />
@@ -38,23 +38,39 @@
 
     <form class="w3-container w3-padding" id="form-datos-cliente">
       <div class="w3-row-padding" style="margin-top: 1em;">
-        <div class="w3-half w3-margin-bottom">
+        <div class="w3-half w3-margin-bottom input-con-icono">
           <label class="w3-text-white">Nombre</label>
-          <input class="w3-input w3-round-large" type="text" name="nombre" required />
+          <div class="input-wrapper">
+            <i class="fa fa-user"></i>
+            <input class="w3-input w3-round-large" type="text" name="nombre" required />
+          </div>
         </div>
-        <div class="w3-half w3-margin-bottom">
+
+        <div class="w3-half w3-margin-bottom input-con-icono">
           <label class="w3-text-white">Apellido</label>
-          <input class="w3-input w3-round-large" type="text" name="apellido" required />
+          <div class="input-wrapper">
+            <i class="fa fa-user-tag"></i>
+            <input class="w3-input w3-round-large" type="text" name="apellido" required />
+          </div>
         </div>
-        <div class="w3-half w3-margin-bottom">
+
+        <div class="w3-half w3-margin-bottom input-con-icono">
           <label class="w3-text-white">Teléfono</label>
-          <input class="w3-input w3-round-large" type="tel" name="telefono" required />
+          <div class="input-wrapper">
+            <i class="fa fa-phone"></i>
+            <input class="w3-input w3-round-large" type="tel" name="telefono" required />
+          </div>
         </div>
-        <div class="w3-half w3-margin-bottom">
+
+        <div class="w3-half w3-margin-bottom input-con-icono">
           <label class="w3-text-white">Email</label>
-          <input class="w3-input w3-round-large" type="email" name="email" required />
+          <div class="input-wrapper">
+            <i class="fa fa-envelope"></i>
+            <input class="w3-input w3-round-large" type="email" name="email" required />
+          </div>
         </div>
       </div>
+
     </form>
 
     <div class="w3-flex w3-center" id="botones">

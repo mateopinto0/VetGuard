@@ -1,0 +1,234 @@
+/* Reset y base */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background: linear-gradient(to bottom right, #011b19, #132c27, #1c6e6e);
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.contenedor {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 5em;
+  flex-direction: column;
+  gap: 2em;
+}
+
+/* Bloque de pasos */
+.bloque-pasos {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 2em;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 1em;
+  margin: 2em;
+}
+
+.barra-pasos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5em;
+  margin-bottom: 1em;
+  flex-wrap: nowrap;
+}
+
+.paso-item {
+  background-color: #264e4b;
+  color: #ccc;
+  padding: 0.6em 1.2em;
+  border-radius: 2em;
+  font-size: 1rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.paso-item.activo {
+  background-color: #00ffcc;
+  color: #011b19;
+  font-weight: bold;
+}
+
+.linea {
+  height: 2px;
+  background-color: #ccc;
+  flex-grow: 1;
+  opacity: 0.5;
+}
+
+/* Título */
+.bloque-titulo {
+  text-align: center;
+}
+
+.bloque-titulo h1 {
+  font-size: 3rem;
+  margin-bottom: 0.2em;
+  background: linear-gradient(to right, #00ffcc, #1c6e6e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bloque-titulo p {
+  font-size: 1.5rem;
+  color: #d3f3ec;
+  margin: 0;
+}
+
+#contenedor-especialistas {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-left: 1em;
+  margin-right: 1em;
+  gap: 6px;
+}
+
+.w3-card {
+  background-color: #1c6e6e;
+  cursor: pointer;
+  border-radius: 1.5em;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.opcion-especialista {
+  background-color: #1c6e6e;
+  cursor: pointer;
+  border-radius: 1.5em;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  min-width: 380px;
+  height: 132.5px;
+  padding: 0 1.5em;
+  position: relative;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease forwards;
+  color: white;
+}
+
+.opcion-especialista:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px #00ffcc50;
+}
+
+.opcion-especialista:hover i.fa,
+.opcion-especialista:hover i.fa-solid {
+  transform: scale(1.2);
+}
+
+
+.opcion-especialista i.fa-user-doctor {
+  color: white !important;
+  font-size: 2.5rem;
+  transition: transform 0.4s ease;
+}
+
+.opcion-especialista p {
+  margin: 0.5em 0 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Selección */
+.opcion-especialista.w3-border {
+  box-shadow: 0 0 15px #00ffcc;
+  border: 2px solid #00ffcc !important;
+}
+
+/* Icono check igual que paso 1 */
+.icono-check {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #00ffcc;
+  font-size: 1.5em;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.w3-border .icono-check {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Botones */
+#botones {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-top: 4em;
+}
+
+#botones a {
+  width: 30%;
+  background: rgba(1, 27, 25, 0.7);
+  backdrop-filter: blur(5px);
+  border: 1px solid #00ffcc40;
+  color: white;
+  text-align: center;
+  padding: 0.6em 1em;
+  border-radius: 2em;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+#botones a:hover {
+  background: #00ffcc;
+  color: #011b19 !important;
+  box-shadow: 0 0 10px #00ffcc80;
+}
+
+/* Animación fadeInUp */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media screen and (max-width: 500px) {
+  body {
+    font-size: 80%;
+  }
+
+  #botones {
+    padding: 1em;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  #botones a {
+    width: 80%;
+  }
+
+  #contenedor-especialistas {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 680px) {
+  #botones {
+    padding: 1em;
+    gap: 1em;
+  }
+
+  #contenedor-especialistas {
+    flex-wrap: nowrap;
+  }
+}

@@ -1,0 +1,127 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background: linear-gradient(to bottom right, #011b19, #132c27, #1c6e6e);
+  color: white;
+}
+
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 5em;
+  gap: 2em;
+}
+
+/* Bloque de pasos */
+.bloque-pasos {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 2em;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 1em;
+  margin: 2em;
+}
+
+.barra-pasos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5em;
+  margin-bottom: 1em;
+  flex-wrap: nowrap;
+}
+
+.paso-item {
+  background-color: #264e4b;
+  color: #ccc;
+  padding: 0.6em 1.2em;
+  border-radius: 2em;
+  font-size: 1rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.paso-item.activo {
+  background-color: #00ffcc;
+  color: #011b19;
+  font-weight: bold;
+}
+
+.linea {
+  height: 2px;
+  background-color: #ccc;
+  flex-grow: 1;
+  opacity: 0.5;
+}
+
+/* Título */
+.bloque-titulo h1 {
+  font-size: 3rem;
+  margin-bottom: 0.2em;
+  background: linear-gradient(to right, #00ffcc, #1c6e6e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bloque-titulo p {
+  font-size: 1.5rem;
+  color: #d3f3ec;
+}
+
+/* Botones */
+#botones {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-top: 4em;
+}
+
+#botones a {
+  width: 30%;
+  background: rgba(1, 27, 25, 0.7);
+  backdrop-filter: blur(5px);
+  border: 1px solid #00ffcc40;
+  color: white;
+  text-align: center;
+  padding: 0.8em 0;
+  border-radius: 2em;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+#botones a:hover {
+  background: #00ffcc;
+  color: #011b19 !important;
+  box-shadow: 0 0 10px #00ffcc80;
+}
+
+/* Responsive */
+@media screen and (max-width: 500px) {
+  body {
+    font-size: 80%;
+  }
+
+  #botones {
+    padding: 1em;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  #botones a {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 680px) {
+  #botones {
+    padding: 1em;
+    gap: 1em;
+  }
+}
