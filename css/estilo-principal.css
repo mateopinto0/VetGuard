@@ -14,11 +14,13 @@ html {
     flex-direction: column;
     color: #ffffff;
 }
-
+.w3-servicios{                                     
+ text-align: left !important;                      
+ font-family: "Raleway", sans-serif !important;
+}
 
 .w3-container2 {
-    /*background: linear-gradient(to bottom right, #011b19, #132c27, #1c6e6e);*/
-    background-color: ;
+    background: linear-gradient(to bottom right, #011b19, #132c27, #1c6e6e);
 }
 
 .w3-bar {
@@ -81,6 +83,7 @@ background-position: 10em -11em;
         padding: 3em 5em;
         margin-top: 5em;
         background-position: center center;  /* Ajuste para pantallas medianas */
+        background-repeat: no-repeat;
     }
      body {
         font-size: 85%;
@@ -102,6 +105,7 @@ background-position: 10em -11em;
     .main-hero {
         padding: 4em 6em;
         margin-top: 6em;
+        background-position: center center;
     }
     #barra{
         
