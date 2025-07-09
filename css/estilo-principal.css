@@ -17,7 +17,8 @@ html {
 
 
 .w3-container2 {
-    background: linear-gradient(to bottom right, #011b19, #132c27, #1c6e6e);
+    /*background: linear-gradient(to bottom right, #011b19, #132c27, #1c6e6e);*/
+    background-color: ;
 }
 
 .w3-bar {
