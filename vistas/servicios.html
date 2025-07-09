@@ -2,7 +2,6 @@
 <html>
 
 <head>
-  <title>W3.CSS Template</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Servicios</title>
@@ -14,7 +13,7 @@
 </head>
 
 <body>
-  <div class="contenedor" id="top">
+<div class="contenedor" id="top">
   <!-- Navbar -->
   <header class="header">
       <div class="w3-container">
@@ -30,14 +29,15 @@
           <a href="#contacto" class="w3-bar-item w3-mobile">Contacto</a>
         </nav>
       </div>
-      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large "
         onclick="w3_open()">
         <i class="fa fa-bars fa-2x"></i>
       </a>
     </div>
-  </div>
-     <nav class="w3-sidebar w3-bar-block w3-card w3-animate-rights w3-hide-medium w3-hide-large"
-    style="display:none; right: 0;" id="mySidebar">
+  </header>
+  <!--barra lateral-->
+     <nav class="w3-sidebar w3-bar-block w3-card w3-animate-right  w3-hide-large"
+    style="display:none;right: 0;" id="mySidebar">
     <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Cerrar</a>
     <a href="../index.html" onclick="w3_close()" class="w3-bar-item w3-button">Inicio</a>
     <a href="./servicios.html" onclick="w3_close()" class="w3-bar-item w3-button">Servicios</a>
@@ -46,34 +46,34 @@
     <a href="./faq.html" onclick="w3_close()" class="w3-bar-item w3-button">Preguntas frecuentes</a>
     <a href="#contacto" onclick="w3_close()" class="w3-bar-item w3-button">Contacto</a>
   </nav>
-    </header>
+
   <!-- Servicios -->
   <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:8em;" id="contenedor-servicios">
     <div class="w3-center text-tit-serv" style="padding: 1em;">Servicios pensados con amor para cada mascota</div>
     <!-- First Photo Grid-->
     <div class="w3-row-padding w3-padding-16 " id="food">
-      <div class="w3-quarter">
+      <div class="w3-quarter card-servicio">
         <img src="../img/emergencia.jpg" alt="Emergencia" class="imagen-con-sombra">
         <h4 class="w3-center">Atención Veterinaria 24/7 </h4>
         <p class="text-left text-det-serv">Brindamos atención médica veterinaria a toda hora, todos los días del año. Ya
           sea una consulta de rutina o una emergencia inesperada, estamos listos para cuidar de tu mascota con
           compromiso, empatía y profesionalismo.</p>
       </div>
-      <div class="w3-quarter">
+      <div class="w3-quarter card-servicio">
         <img src="../img/vacuna.jpg" alt="Vacuna" class="imagen-con-sombra">
         <h4 class="w3-center">Vacunación</h4>
         <p class="text-left text-det-serv">La prevención es la clave para una vida larga y saludable. Contamos con un
           calendario completo de vacunación y planes preventivos personalizados para proteger a tu mascota contra
           enfermedades comunes y peligrosas.</p>
       </div>
-      <div class="w3-quarter">
+      <div class="w3-quarter card-servicio">
         <img src="../img/radiografia.jpg" alt="radiografia" class="imagen-con-sombra">
         <h4 class="w3-center">Diagnóstico por imagen</h4>
         <p class="text-left text-det-serv">Disponemos de tecnología de diagnóstico por imagen que nos permite detectar y
           evaluar con precisión distintas afecciones. Realizamos estudios como radiografías y ecografías de forma rápida
           y segura, incluso durante emergencias.</p>
       </div>
-      <div class="w3-quarter">
+      <div class="w3-quarter card-servicio">
         <img src="../img/laboratorio.png" alt="laboratorio"class="imagen-con-sombra">
         <h4 class="w3-center">Laboratorio clínico</h4>
         <p class="text-left text-det-serv">Contamos con laboratorio propio para análisis clínicos, lo que nos permite
@@ -85,7 +85,7 @@
    class="w3-button w3-red w3-round-large w3-hover-shadow w3-large w3-card w3-padding w3-text-white"
    style="position: fixed; bottom: 70px; right: 20px; z-index: 1000;">
    <i class="fa fa-phone"></i> Emergencia
-</a>
+  </a>
   </div>
 
   <!-- Footer -->
