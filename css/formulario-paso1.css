@@ -22,7 +22,7 @@ html {
   flex-direction: column;
   color: white;
   gap: 2.5em;
-  padding-bottom: 2em; /* Evita que los botones queden muy pegados al borde */
+  padding-bottom: 2em;
 }
 
 .bloque-pasos {
@@ -35,6 +35,7 @@ html {
   margin-top: 2em;
   margin-right: 2em;
   margin-left: 2em;
+  margin-bottom: 1em;
 }
 
 .barra-pasos {
@@ -86,7 +87,7 @@ html {
 #contenedor-mascotas {
   display: flex;
   flex-wrap: nowrap;
-  margin-left: 1em;
+  margin-left: 0.6em;
   margin-right: 1em;
   gap: 6px;
 }
@@ -95,6 +96,7 @@ html {
   background-color: #1c6e6e;
   cursor: pointer;
   border-radius: 1.5em;
+  margin: 0;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -165,7 +167,9 @@ html {
 }
 
 .bloque-formulario {
-  margin: 2em;
+  margin-top: 0;
+  margin-left: 2em;
+  margin-right: 2em;
   display: flex;
   flex-direction: column;
   gap: 1.5em;
@@ -185,18 +189,24 @@ textarea {
   padding: 0.7em;
   border: 1px solid #00ffcc60;
   border-radius: 0.8em;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.12) !important;
   color: #ffffff;
   font-size: 1em;
   outline: none;
   transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
-input:focus,
-select:focus,
-textarea:focus {
-  border-color: #00ffcc;
-  background-color: rgba(255, 255, 255, 0.08);
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+  input:focus,
+  select:focus,
+  textarea:focus {
+    border-color: #00ffcc;
+    background-color: rgba(255, 255, 255, 0.18) !important;
 }
 
 label {
@@ -205,6 +215,13 @@ label {
   font-weight: 500;
   color: #d3f3ec;
 }
+
+::placeholder {
+  color: #cccccc;
+  opacity: 1;
+  font-style: italic;
+}
+
 .input-con-icono .input-wrapper {
   position: relative;
   display: flex;
@@ -221,6 +238,7 @@ label {
 .input-con-icono input,
 .input-con-icono select,
 .input-con-icono textarea {
+  height: 3em;
   padding-left: 2.5em !important;
   background-color: rgba(255, 255, 255, 0.05);
   border: 1px solid #00ffcc60;
@@ -235,18 +253,15 @@ label {
   border-color: #00ffcc;
   background-color: rgba(255, 255, 255, 0.08);
 }
-/*@media screen and (max-width: 500px) {
-  #contenedor-mascotas .w3-quarter {
-    width: 100% !important;
-  }
-   .bloque-titulo h1 {
-    font-size: 2rem;
-  }
 
-  .bloque-titulo p {
-    font-size: 1.1rem;
-  }
-}*/
+select,
+select option {
+  background-color: rgb(8, 57, 64);
+  color: #fff;
+}
+
+
+
 @media screen and (max-width: 768px) {
   .w3-half, .w3-third {
     width: 100% !important;
@@ -305,7 +320,7 @@ label {
     width: 100% !important;
     margin-bottom: 1em;
     flex: 1 1 45%;
-  min-width: 180px;
+    min-width: 180px;
   }
    .bloque-titulo h1 {
     font-size: 2rem;
