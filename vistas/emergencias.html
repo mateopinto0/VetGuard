@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <title>Emergencias 24/7 - VetGuard</title>
@@ -11,71 +12,80 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
-    
     .emergencia-banner {
       background-color: #132c27;
       color: white;
     }
+
     .emergencia-icon {
       font-size: 64px;
     }
-    .emergencia-banner{
-        margin-top: 6.5em;
+
+    .emergencia-banner {
+      margin-top: 6.5em;
     }
+
     /* Flexbox para igualar la altura de las tarjetas */
-.equal-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1em; /* espacio entre tarjetas */
-}
+    .equal-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
+      /* espacio entre tarjetas */
+    }
 
-/* Que cada .w3-third se estire verticalmente */
-.equal-cards .w3-third {
-  display: flex;
-  flex-direction: column;
-}
+    /* Que cada .w3-third se estire verticalmente */
+    .equal-cards .w3-third {
+      display: flex;
+      flex-direction: column;
+    }
 
-/* Que la tarjeta se expanda para ocupar todo el alto */
-.equal-cards .w3-card {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* Opcional: mantiene botón abajo */
-}
-.emergencia-lista {
-  max-width: 600px;      /* controla el ancho total */
-  margin: 0 auto;        /* centra la lista horizontalmente */
-  text-align: left;      /* alinea el texto de cada li a la izquierda */
-  padding: 0 1em;        /* espacio lateral para móviles */
-}
+    /* Que la tarjeta se expanda para ocupar todo el alto */
+    .equal-cards .w3-card {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      /* Opcional: mantiene botón abajo */
+    }
+
+    .emergencia-lista {
+      max-width: 600px;
+      /* controla el ancho total */
+      margin: 0 auto;
+      /* centra la lista horizontalmente */
+      text-align: left;
+      /* alinea el texto de cada li a la izquierda */
+      padding: 0 1em;
+      /* espacio lateral para móviles */
+    }
 
 
-/* Flex solo en pantallas grandes */
-@media (min-width: 601px) {
-  .equal-cards {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 16px;
-  }
+    /* Flex solo en pantallas grandes */
+    @media (min-width: 601px) {
+      .equal-cards {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 16px;
+      }
 
-  .equal-cards .w3-third {
-    display: flex;
-    flex-direction: column;
-  }
+      .equal-cards .w3-third {
+        display: flex;
+        flex-direction: column;
+      }
 
-  .equal-cards .w3-card {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-}
-
+      .equal-cards .w3-card {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    }
   </style>
 </head>
+
 <body>
- <div class="contenedor">   
-<header class="header">
+  <div class="contenedor">
+    <header class="header">
       <div class="w3-container">
         <a href="#top"><img src="../img/simplification.svg" alt="logo" id="logo"></a>
       </div>
@@ -89,15 +99,15 @@
           <a href="#contacto" class="w3-bar-item w3-mobile">Contacto</a>
         </nav>
       </div>
-      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large"
-        onclick="w3_open()">
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large" onclick="w3_open()">
         <i class="fa fa-bars fa-2x"></i>
       </a>
-    </div>
-  </div></header>
+  </div>
+  </div>
+  </header>
   <!--barra lateral-->
-     <nav class="w3-sidebar w3-bar-block w3-card w3-animate-right w3-hide-large"
-    style="display:none;right: 0;" id="mySidebar">
+  <nav class="w3-sidebar w3-bar-block w3-card w3-animate-right w3-hide-large" style="display:none;right: 0;"
+    id="mySidebar">
     <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Cerrar</a>
     <a href="../index.html" onclick="w3_close()" class="w3-bar-item w3-button">Inicio</a>
     <a href="./servicios.html" onclick="w3_close()" class="w3-bar-item w3-button">Servicios</a>
@@ -106,108 +116,110 @@
     <a href="./faq.html" onclick="w3_close()" class="w3-bar-item w3-button">Preguntas frecuentes</a>
     <a href="#contacto" onclick="w3_close()" class="w3-bar-item w3-button">Contacto</a>
   </nav>
-<!-- Banner Emergencia -->
-<div class="w3-container w3-center emergencia-banner w3-padding-32">
-  <h1 class="w3-xxlarge"><i class="fa-solid fa-triangle-exclamation"></i> ¡Emergencias Veterinarias 24/7!</h1>
-  <p class="w3-large">Atención inmediata para perros, gatos y animales exóticos</p>
-</div>
-
-<!-- Información Principal -->
-<section class="w3-container w3-padding-32">
-  <div class="w3-row-padding w3-center equal-cards">
-    
-    <div class="w3-third w3-margin-bottom">
-      <div class="w3-card w3-padding w3-hover-shadow w3-round-xlarge">
-        <i class="fa-solid fa-phone emergencia-icon w3-text-red"></i>
-        <h3>Teléfono de Emergencia</h3>
-        <p class="w3-xlarge"><strong>(011)6550-4976</strong></p>
-      </div>
-    </div>
-    
-    <div class="w3-third w3-margin-bottom">
-      <div class="w3-card w3-padding w3-hover-shadow w3-round-xlarge">
-        <i class="fa-brands fa-whatsapp emergencia-icon w3-text-green"></i>
-        <h3>WhatsApp Urgente</h3>
-        <a href="https://wa.me/541165504976" target="_blank" class="w3-button w3-green w3-margin-top w3-round-large">
-          <i class="fa-brands fa-whatsapp"></i> Enviar Mensaje
-        </a>
-      </div>
-    </div>
-
-    <div class="w3-third w3-margin-bottom">
-      <div class="w3-card w3-padding w3-hover-shadow w3-round-xlarge">
-        <i class="fa-solid fa-map-location-dot emergencia-icon w3-text-blue"></i>
-        <h3>¿Dónde estamos?</h3>
-        <p>Florencio Varela 1903, San Justo</p>
-        <a href="https://maps.google.com" target="_blank" class="w3-button w3-blue w3-margin-top w3-round-large">
-          Cómo llegar
-        </a>
-      </div>
-    </div>
-    
+  <!-- Banner Emergencia -->
+  <div class="w3-container w3-center emergencia-banner w3-padding-32">
+    <h1 class="w3-xxlarge"><i class="fa-solid fa-triangle-exclamation"></i> ¡Emergencias Veterinarias 24/7!</h1>
+    <p class="w3-large">Atención inmediata para perros, gatos y animales exóticos</p>
   </div>
-</section>
 
-<!-- Qué hacer en una emergencia -->
-<section class="w3-container w3-light-grey w3-padding-32">
-  <h2 class="w3-center">¿Qué hacer en una emergencia?</h2>
-  <ul class="w3-ul w3-large  emergencia-lista">
-    <li>✅ Mantené la calma y asegurá a tu mascota</li>
-    <li>✅ Llamanos o escribinos por WhatsApp</li>
-    <li>✅ No le administres medicamentos sin indicación</li>
-    <li>✅ Transportala con cuidado, en caja o manta</li>
-  </ul>
-</section>
+  <!-- Información Principal -->
+  <section class="w3-container w3-padding-32 contenedor-tarjetas-emergencia">
+    <div class="w3-row-padding w3-center equal-cards">
 
-<!-- Botón flotante de emergencia -->
- <a href="tel:+5491122334455"
-   class="w3-button w3-red w3-round-large w3-hover-shadow w3-large w3-card w3-padding w3-text-white"
-   style="position: fixed; bottom: 70px; right: 20px; z-index: 1000;">
-   <i class="fa fa-phone"></i> Emergencia
-</a>
+      <div class="w3-third w3-margin-bottom">
+        <div class="w3-card w3-padding w3-hover-shadow w3-round-xlarge tarjeta-emergencia">
+          <i class="fa-solid fa-phone emergencia-icon w3-text-red"></i>
+          <h3>Teléfono de Emergencia</h3>
+          <p class="w3-xlarge"><strong>(011) 6550-4976</strong></p>
+        </div>
+      </div>
+
+      <div class="w3-third w3-margin-bottom">
+        <div class="w3-card w3-padding w3-hover-shadow w3-round-xlarge tarjeta-emergencia">
+          <i class="fa-brands fa-whatsapp emergencia-icon w3-text-green"></i>
+          <h3>WhatsApp Urgente</h3>
+          <a href="https://wa.me/541165504976" target="_blank" class="w3-button w3-green w3-margin-top w3-round-large">
+            <i class="fa-brands fa-whatsapp"></i> Enviar Mensaje
+          </a>
+        </div>
+      </div>
+
+      <div class="w3-third w3-margin-bottom">
+        <div class="w3-card w3-padding w3-hover-shadow w3-round-xlarge tarjeta-emergencia">
+          <i class="fa-solid fa-map-location-dot emergencia-icon w3-text-blue"></i>
+          <h3>¿Dónde estamos?</h3>
+          <p>Florencio Varela 1903, San Justo</p>
+          <a href="https://maps.google.com" target="_blank" class="w3-button w3-blue w3-margin-top w3-round-large">
+            Cómo llegar
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Qué hacer en una emergencia -->
+  <section class="w3-container w3-light-grey w3-padding-32 emergencia-pasos">
+    <h2 class="w3-center">¿Qué hacer en una emergencia?</h2>
+    <ul class="w3-ul w3-large  emergencia-lista">
+      <li>✅ Mantené la calma y asegurá a tu mascota</li>
+      <li>✅ Llamanos o escribinos por WhatsApp</li>
+      <li>✅ No le administres medicamentos sin indicación</li>
+      <li>✅ Transportala con cuidado, en caja o manta</li>
+    </ul>
+  </section>
+
+  <!-- Botón flotante de emergencia -->
+  <a href="tel:+5491122334455"
+    class="w3-button w3-red w3-round-large w3-hover-shadow w3-large w3-card w3-padding w3-text-white"
+    style="position: fixed; bottom: 70px; right: 20px; z-index: 1000;">
+    <i class="fa fa-phone"></i> Emergencia
+  </a>
 
   <!-- Footer -->
-    <footer class="footer w3-text-white" id="contacto">
-      <div class="contacto">
-        <h4>Contacto</h4>
-        <p>Atencion por WhatsApp: 11 6550-4976</p>
-        <p>Correo electrónico: vetguard@gmail.com</p>
-      </div>
+  <footer class="footer w3-text-white" id="contacto">
+    <div class="contacto">
+      <h4>Contacto</h4>
+      <p>Atencion por WhatsApp: 11 6550-4976</p>
+      <p>Correo electrónico: vetguard@gmail.com</p>
+    </div>
 
-      <div class="redes"> 
-        <h4>Redes Sociales</h4>
-    <div class="w3-xlarge w3-margin-top iconos-redes">
-      <a href="https://facebook.com" target="_blank" class="w3-hover-opacity">
-        <i class="fab fa-facebook"></i>
-      </a>
-      <a href="https://instagram.com" target="_blank" class="w3-hover-opacity">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://wa.me/5491165504976" target="_blank" class="w3-hover-opacity">
-        <i class="fab fa-whatsapp"></i>
-      </a>
-    </div></div>
-
-      <div class="ubicacion">
-        <h4 class="como-llegar">¿Cómo llegar?</h4>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.364333976803!2d-58.565385488449046!3d-34.670753160929074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc62cc3ef7083%3A0x8867107f425fade5!2sUniversidad%20Nacional%20de%20La%20Matanza!5e0!3m2!1ses!2sar!4v1751745772411!5m2!1ses!2sar"
-          width="90%" height="150" style="border:0;" allowfullscreen="" loading="lazy" 
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <p>Dirección: Florencio Varela 1903, San Justo</p>
+    <div class="redes">
+      <h4>Redes Sociales</h4>
+      <div class="w3-xlarge w3-margin-top iconos-redes">
+        <a href="https://facebook.com" target="_blank" class="w3-hover-opacity">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" class="w3-hover-opacity">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://wa.me/5491165504976" target="_blank" class="w3-hover-opacity">
+          <i class="fab fa-whatsapp"></i>
+        </a>
       </div>
     </div>
-  </footer>
-  
-</div>
- <script>
-function w3_open() {
-  document.getElementById("mySidebar").style.display = "block";
-}
 
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-}
-</script>
+    <div class="ubicacion">
+      <h4 class="como-llegar">¿Cómo llegar?</h4>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.364333976803!2d-58.565385488449046!3d-34.670753160929074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc62cc3ef7083%3A0x8867107f425fade5!2sUniversidad%20Nacional%20de%20La%20Matanza!5e0!3m2!1ses!2sar!4v1751745772411!5m2!1ses!2sar"
+        width="90%" height="150" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <p>Dirección: Florencio Varela 1903, San Justo</p>
+    </div>
+    </div>
+  </footer>
+
+  </div>
+  <script>
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+    }
+
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+    }
+  </script>
 </body>
+
 </html>
