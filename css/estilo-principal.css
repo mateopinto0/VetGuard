@@ -75,9 +75,10 @@ nav a:hover {
     align-items: center;
     padding: 5em 4em;
     background-size: cover;
-background-position: 10em -11em;
+    background-position: 10em -11em;
     min-height: 85vh;
     color: white;
+    margin: 8.5em 0;
 }
 
 
@@ -420,4 +421,7 @@ footer {
 }
 .main__card--p{
 
+}
+.imagen-doctor{
+    margin: 0 auto;
 }
