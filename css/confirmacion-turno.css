@@ -1,3 +1,7 @@
+*{
+    font-family: "TikTok Sans", sans-serif;
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -5,7 +9,7 @@ html, body {
   height: 100%;
   background: linear-gradient(to bottom right, #011b19, #132c27, #1c6e6e);
   color: white;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "TikTok Sans", sans-serif;
 }
 
 body {
@@ -31,8 +35,13 @@ h1 {
   font-size: 3rem;
   margin-bottom: 0.2em;
   font-size: 3rem;
+  font-weight: 600;
   margin-bottom: 0.2em;
   color: white;
+}
+
+h2{
+  font-weight: 600;
 }
 
 .confirmacion-texto {

@@ -1,4 +1,7 @@
-/* Reset y base */
+*{
+    font-family: "TikTok Sans", sans-serif;
+}
+
 body, html {
   margin: 0;
   padding: 0;
@@ -67,9 +70,9 @@ body, html {
 }
 
 .bloque-titulo h1 {
-
   font-size: 3rem;
   margin-bottom: 0.2em;
+  font-weight: 600;
   background: linear-gradient(to right, #00ffcc, #1c6e6e);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Raleway", sans-serif;
+    font-family: "TikTok Sans", sans-serif;
 }
 html {
     font-size: 100%; /* En desktop */
@@ -20,7 +20,6 @@ img{
 }
 .w3-servicios{                                     
  text-align: left !important;                      
- font-family: "Raleway", sans-serif !important;
 }
 
 .w3-container2 {
@@ -87,14 +86,15 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin-left: 5em;
 }
 
 .main-left h1 {
-    
-    font-size: clamp(2rem, 8vw, 4.5rem);
 
+    font-size: clamp(2rem, 8vw, 4.5rem);
     font-weight: 800;
     text-shadow: 1px 1px 8px #0b1d17;
+
 }
 
 .main-left p {
@@ -112,6 +112,7 @@ nav a:hover {
     border-radius: 2em;
     box-shadow: 0 4px 10px #0b1d1799;
     transition: all 0.3s ease-in-out;
+    margin-left: 5em;
 }
 
 .main-left a:hover {
