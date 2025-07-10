@@ -443,6 +443,15 @@ footer {
     margin: 0 auto;
 }
 
+.main__img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
 .main__title {
     text-align: center;
     font-size: 2.5rem;
@@ -452,11 +461,13 @@ footer {
 .main__grid {
     display: grid;
     gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     justify-content: center;
-    grid-template-columns: repeat(4, 320px);
 }
 
 .main__card {
+    max-width: 400px;
+    margin: 0 auto;
     padding: 25px;
     background-color: #ffffff;
     border-radius: 16px;
