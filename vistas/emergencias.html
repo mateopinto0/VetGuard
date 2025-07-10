@@ -22,6 +22,55 @@
     .emergencia-banner{
         margin-top: 6.5em;
     }
+    /* Flexbox para igualar la altura de las tarjetas */
+.equal-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em; /* espacio entre tarjetas */
+}
+
+/* Que cada .w3-third se estire verticalmente */
+.equal-cards .w3-third {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Que la tarjeta se expanda para ocupar todo el alto */
+.equal-cards .w3-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Opcional: mantiene botón abajo */
+}
+.emergencia-lista {
+  max-width: 600px;      /* controla el ancho total */
+  margin: 0 auto;        /* centra la lista horizontalmente */
+  text-align: left;      /* alinea el texto de cada li a la izquierda */
+  padding: 0 1em;        /* espacio lateral para móviles */
+}
+
+
+/* Flex solo en pantallas grandes */
+@media (min-width: 601px) {
+  .equal-cards {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 16px;
+  }
+
+  .equal-cards .w3-third {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .equal-cards .w3-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -65,10 +114,10 @@
 
 <!-- Información Principal -->
 <section class="w3-container w3-padding-32">
-  <div class="w3-row-padding w3-center">
+  <div class="w3-row-padding w3-center equal-cards">
     
     <div class="w3-third w3-margin-bottom">
-      <div class="w3-card w3-padding w3-hover-shadow">
+      <div class="w3-card w3-padding w3-hover-shadow w3-round-xlarge">
         <i class="fa-solid fa-phone emergencia-icon w3-text-red"></i>
         <h3>Teléfono de Emergencia</h3>
         <p class="w3-xlarge"><strong>(011)6550-4976</strong></p>
@@ -76,21 +125,21 @@
     </div>
     
     <div class="w3-third w3-margin-bottom">
-      <div class="w3-card w3-padding w3-hover-shadow">
+      <div class="w3-card w3-padding w3-hover-shadow w3-round-xlarge">
         <i class="fa-brands fa-whatsapp emergencia-icon w3-text-green"></i>
         <h3>WhatsApp Urgente</h3>
-        <a href="https://wa.me/541165504976" target="_blank" class="w3-button w3-green w3-margin-top">
+        <a href="https://wa.me/541165504976" target="_blank" class="w3-button w3-green w3-margin-top w3-round-large">
           <i class="fa-brands fa-whatsapp"></i> Enviar Mensaje
         </a>
       </div>
     </div>
 
     <div class="w3-third w3-margin-bottom">
-      <div class="w3-card w3-padding w3-hover-shadow">
+      <div class="w3-card w3-padding w3-hover-shadow w3-round-xlarge">
         <i class="fa-solid fa-map-location-dot emergencia-icon w3-text-blue"></i>
         <h3>¿Dónde estamos?</h3>
         <p>Florencio Varela 1903, San Justo</p>
-        <a href="https://maps.google.com" target="_blank" class="w3-button w3-blue w3-margin-top">
+        <a href="https://maps.google.com" target="_blank" class="w3-button w3-blue w3-margin-top w3-round-large">
           Cómo llegar
         </a>
       </div>
@@ -102,7 +151,7 @@
 <!-- Qué hacer en una emergencia -->
 <section class="w3-container w3-light-grey w3-padding-32">
   <h2 class="w3-center">¿Qué hacer en una emergencia?</h2>
-  <ul class="w3-ul w3-large w3-center">
+  <ul class="w3-ul w3-large  emergencia-lista">
     <li>✅ Mantené la calma y asegurá a tu mascota</li>
     <li>✅ Llamanos o escribinos por WhatsApp</li>
     <li>✅ No le administres medicamentos sin indicación</li>
