@@ -205,11 +205,11 @@ input[type="number"]::-webkit-inner-spin-button {
   margin: 0;
 }
 
-input:focus,
-select:focus,
-textarea:focus {
-  border-color: #00ffcc;
-  background-color: rgba(255, 255, 255, 0.18) !important;
+  input:focus,
+  select:focus,
+  textarea:focus {
+    border-color: #00ffcc;
+    background-color: rgba(255, 255, 255, 0.18) !important;
 }
 
 label {
