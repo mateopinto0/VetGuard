@@ -273,6 +273,19 @@ footer {
     text-align: left;
     line-height: 1.5em;
 }
+
+#testimonios{
+    background: linear-gradient(to bottom right, #011b19, #132c27, #1c6e6e);
+}
+
+#testimonios h2, #testimonios h3{
+    color: white;
+}
+
+#testimonios .w3-card {
+  border-radius: 12px;
+}
+
 footer.footer {
   background: linear-gradient(135deg, #0b1d17, #132c27);
   padding: 3em 2em;
