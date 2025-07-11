@@ -5,7 +5,8 @@
   font-family: "TikTok Sans", sans-serif;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   background: linear-gradient(to bottom right, #011b19, #132c27, #1c6e6e);
@@ -41,7 +42,7 @@ h1 {
   color: white;
 }
 
-h2{
+h2 {
   font-weight: 600;
 }
 
@@ -51,10 +52,10 @@ h2{
   margin: 1em 0 2em 0;
 }
 
-.icono-exito {
+.icon-exito {
   font-size: 4rem;
   color: #00ff66;
-  margin-bottom: 0.5em; 
+  margin-bottom: 0.5em;
 }
 
 
@@ -82,7 +83,8 @@ h2{
   from {
     opacity: 0;
     transform: translateY(20px);
-  }  
+  }
+
   to {
     opacity: 1;
     transform: translateY(0);

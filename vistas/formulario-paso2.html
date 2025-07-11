@@ -38,42 +38,43 @@
       </div>
     </div>
 
-    <form class="w3-container w3-padding" id="form-datos-cliente">
-      <div class="w3-row-padding" style="margin-top: 1em;">
-        <div class="w3-half w3-margin-bottom input-con-icono">
-          <label class="w3-text-white">Nombre</label>
+    <form id="form-datos-cliente" class="w3-container w3-padding">
+      <div class="input-row">
+        <div class="input-col input-con-icono">
+          <label>Nombre</label>
           <div class="input-wrapper">
             <i class="fa fa-user"></i>
-            <input class="w3-input w3-round-large" type="text" name="nombre" required />
+            <input type="text" name="nombre" required />
           </div>
         </div>
-
-        <div class="w3-half w3-margin-bottom input-con-icono">
-          <label class="w3-text-white">Apellido</label>
+    
+        <div class="input-col input-con-icono">
+          <label>Apellido</label>
           <div class="input-wrapper">
             <i class="fa fa-user-tag"></i>
-            <input class="w3-input w3-round-large" type="text" name="apellido" required />
-          </div>
-        </div>
-
-        <div class="w3-half w3-margin-bottom input-con-icono">
-          <label class="w3-text-white">Teléfono</label>
-          <div class="input-wrapper">
-            <i class="fa fa-phone"></i>
-            <input class="w3-input w3-round-large" type="tel" name="telefono" required />
-          </div>
-        </div>
-
-        <div class="w3-half w3-margin-bottom input-con-icono">
-          <label class="w3-text-white">Email</label>
-          <div class="input-wrapper">
-            <i class="fa fa-envelope"></i>
-            <input class="w3-input w3-round-large" type="email" name="email" required />
+            <input type="text" name="apellido" required />
           </div>
         </div>
       </div>
-
-    </form>
+    
+      <div class="input-row">
+        <div class="input-col input-con-icono">
+          <label>Teléfono</label>
+          <div class="input-wrapper">
+            <i class="fa fa-phone"></i>
+            <input type="tel" name="telefono" required />
+          </div>
+        </div>
+    
+        <div class="input-col input-con-icono">
+          <label>Email</label>
+          <div class="input-wrapper">
+            <i class="fa fa-envelope"></i>
+            <input type="email" name="email" required />
+          </div>
+        </div>
+      </div>
+    </form>    
 
     <div class="w3-flex w3-center" id="botones">
       <a href="../vistas/formulario-paso1.html" class="w3-btn w3-round-xxlarge w3-text-white">Volver</a>

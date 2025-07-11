@@ -1,8 +1,9 @@
-*{
-    font-family: "TikTok Sans", sans-serif;
+* {
+  font-family: "TikTok Sans", sans-serif;
 }
 
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -38,6 +39,7 @@ body, html {
   gap: 0.5em;
   margin-bottom: 1em;
   flex-wrap: nowrap;
+  /* desktop fila sin wrap */
 }
 
 .paso-item {
@@ -62,6 +64,8 @@ body, html {
   background-color: #ccc;
   flex-grow: 1;
   opacity: 0.5;
+  display: block;
+  /* visible en desktop */
 }
 
 /* Título */
@@ -84,21 +88,20 @@ body, html {
   margin: 0;
 }
 
+/* Contenedor especialistas */
 #contenedor-especialistas {
   display: flex;
-  flex-wrap: nowrap;
+  gap: 1em;
   margin-left: 1em;
   margin-right: 1em;
-  gap: 6px;
+  flex-wrap: nowrap;
+  /* No wrap en desktop para fila */
+  justify-content: center;
+  /* Centrar tarjetas */
 }
 
-.w3-card {
-  background-color: #1c6e6e;
-  cursor: pointer;
-  border-radius: 1.5em;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
+/* Tarjetas especialistas */
+.w3-card,
 .opcion-especialista {
   background-color: #1c6e6e;
   cursor: pointer;
@@ -109,7 +112,11 @@ body, html {
   align-items: center;
   justify-content: center;
   gap: 1em;
-  min-width: 380px;
+  /* Cambié min-width por flex-basis para que crezca y se reduzca */
+  flex: 1 1 300px;
+  /* crecer y reducir, base 300px */
+  max-width: 380px;
+  /* para no estirar demasiado */
   height: 132.5px;
   padding: 0 1.5em;
   position: relative;
@@ -118,6 +125,7 @@ body, html {
   transform: translateY(20px);
   animation: fadeInUp 0.5s ease forwards;
   color: white;
+  box-sizing: border-box;
 }
 
 .opcion-especialista:hover {
@@ -129,7 +137,6 @@ body, html {
 .opcion-especialista:hover i.fa-solid {
   transform: scale(1.2);
 }
-
 
 .opcion-especialista i.fa-user-doctor {
   color: white !important;
@@ -150,7 +157,7 @@ body, html {
   border: 2px solid #00ffcc !important;
 }
 
-/* Icono check igual que paso 1 */
+/* Icono check */
 .icono-check {
   position: absolute;
   top: 10px;
@@ -204,34 +211,68 @@ body, html {
 }
 
 /* Responsive */
-@media screen and (max-width: 500px) {
-  body {
-    font-size: 80%;
+
+@media (min-width: 992px) {
+  .barra-pasos {
+    flex-wrap: nowrap;
+    justify-content: space-between;
   }
 
-  #botones {
-    padding: 1em;
-    flex-direction: column;
-    gap: 1em;
+  .linea {
+    display: block;
   }
 
-  #botones a {
-    width: 80%;
-  }
-
-  #contenedor-especialistas {
-    flex-wrap: wrap;
-    justify-content: center;
+  .paso-item {
+    width: auto;
+    flex: none;
   }
 }
 
-@media screen and (min-width: 500px) and (max-width: 680px) {
-  #botones {
-    padding: 1em;
+/* Pasos: >=600px fila y líneas visibles */
+@media (min-width: 600px) and (max-width: 991px) {
+  .barra-pasos {
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1em;
   }
 
+  .linea {
+    display: none;
+  }
+
+  .paso-item {
+    flex: 1 1 45%;
+    text-align: center;
+  }
+}
+
+/* Pasos y especialistas: <600px apilados vertical */
+@media (max-width: 599px) {
+  .barra-pasos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .linea {
+    display: none;
+  }
+
+  .paso-item {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Especialistas apilados en pantallas chicas */
   #contenedor-especialistas {
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    ;
+  }
+
+  #contenedor-especialistas>div {
+    flex: 1 1 90%;
+    max-width: 90%;
+    margin-bottom: 1em;
   }
 }

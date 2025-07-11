@@ -1,8 +1,9 @@
-*{
-    font-family: "TikTok Sans", sans-serif;
+* {
+  font-family: "TikTok Sans", sans-serif;
 }
 
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -14,10 +15,11 @@ html {
   box-sizing: border-box;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
-
 
 .contenedor {
   display: flex;
@@ -207,11 +209,11 @@ input[type="number"]::-webkit-inner-spin-button {
   margin: 0;
 }
 
-  input:focus,
-  select:focus,
-  textarea:focus {
-    border-color: #00ffcc;
-    background-color: rgba(255, 255, 255, 0.18) !important;
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #00ffcc;
+  background-color: rgba(255, 255, 255, 0.18) !important;
 }
 
 label {
@@ -265,112 +267,122 @@ select option {
   color: #fff;
 }
 
-
-
-@media screen and (max-width: 768px) {
-  .w3-half, .w3-third {
-    width: 100% !important;
-  }
-   .bloque-titulo h1 {
-    font-size: 2.5rem;
-  }
-
-  .bloque-titulo p {
-    font-size: 1.3rem;
-  }
-}
-
-
-@media screen and (max-width: 600px) {
-   .contenedor {
-    padding-left: 1em;
-    padding-right: 1em;
-  }
-  .bloque-formulario .w3-third {
-    width: 100% !important;
-  }
-
-  textarea {
-    min-height: 100px;
-  }
-}
-
-
+/* ANIMACIÓN NECESARIA */
 @keyframes fadeInUp {
-  to {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-@media screen and (max-width: 500px) {
-  body {
-    font-size: 80%;
+/* === MEDIA QUERIES RESPONSIVAS === */
+
+/* DESKTOP: 4 pasos en fila, tarjetas en fila */
+@media (min-width: 992px) {
+  .barra-pasos {
+    flex-wrap: nowrap;
+    justify-content: space-between;
   }
 
-  #botones {
-    padding: 1em;
-    flex-direction: column;
+  .linea {
+    display: block;
+  }
+
+  .paso-item {
+    width: auto;
+    flex: none;
+  }
+
+  #contenedor-mascotas {
+    flex-wrap: nowrap;
+  }
+
+  #contenedor-mascotas>div {
+    width: 24%;
+  }
+}
+
+/* TABLET: 2 pasos por fila, tarjetas en 2 columnas */
+@media (max-width: 991px) and (min-width: 600px) {
+  .barra-pasos {
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1em;
   }
 
-  #botones a {
-    width: 80%;
+  .linea {
+    display: none;
+  }
+
+  .paso-item {
+    flex: 1 1 45%;
+    text-align: center;
   }
 
   #contenedor-mascotas {
     flex-wrap: wrap;
+    justify-content: center;
   }
-  #contenedor-mascotas .w3-quarter {
-    width: 100% !important;
+
+  #contenedor-mascotas>div {
+    width: 45%;
     margin-bottom: 1em;
-    flex: 1 1 45%;
-    min-width: 180px;
   }
-   .bloque-titulo h1 {
+}
+
+/* MOBILE: 1 paso por fila, tarjetas apiladas */
+@media (max-width: 599px) {
+  .barra-pasos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .linea {
+    display: none;
+  }
+
+  .paso-item {
+    width: 100%;
+    text-align: center;
+  }
+
+  #contenedor-mascotas {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #contenedor-mascotas>div {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+
+  .bloque-pasos,
+  .bloque-formulario {
+    margin-left: 1em;
+    margin-right: 1em;
+    padding: 1em;
+  }
+
+  .w3-third {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+
+  #botones a {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+
+  .bloque-titulo h1 {
     font-size: 2rem;
   }
 
   .bloque-titulo p {
     font-size: 1.1rem;
   }
-  .input-con-icono {
-  margin-bottom: 1em;
-}
-#botones a {
-  padding: 1em 2em;
-  font-size: 1.1rem;
-}
-textarea {
-  resize: vertical;
-}
-.barra-pasos {
-  overflow-x: auto;
-  flex-wrap: nowrap;
-}
-.barra-pasos::-webkit-scrollbar {
-  display: none;
-}
-.w3-row-padding {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  gap: 1em;
-}
-
-}
-
-@media screen and (min-width: 500px) and (max-width: 680px) {
-  #botones {
-    padding: 1em;
-    gap: 1em;
-  }
-
-  #contenedor-mascotas {
-    flex-wrap: nowrap;
-  }
-}
-
-.opcion-mascota i.fa,
-.opcion-mascota i.fa-solid {
-  transition: transform 0.4s ease;
 }

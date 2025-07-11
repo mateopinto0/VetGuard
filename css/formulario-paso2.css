@@ -1,8 +1,9 @@
-*{
-    font-family: "TikTok Sans", sans-serif;
+* {
+  font-family: "TikTok Sans", sans-serif;
 }
 
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -16,7 +17,6 @@ body, html {
   width: 100%;
   min-height: 100vh;
   flex-direction: column;
-
 }
 
 .bloque-pasos {
@@ -29,6 +29,7 @@ body, html {
   margin: 2em;
 }
 
+/* BARRA DE PASOS */
 .barra-pasos {
   display: flex;
   align-items: center;
@@ -36,6 +37,7 @@ body, html {
   gap: 0.5em;
   margin-bottom: 1em;
   flex-wrap: nowrap;
+  /* Desktop por defecto */
 }
 
 .paso-item {
@@ -62,6 +64,7 @@ body, html {
   opacity: 0.5;
 }
 
+/* TÍTULOS */
 .bloque-titulo h1 {
   font-size: 3rem;
   margin-bottom: 0.2em;
@@ -76,6 +79,7 @@ body, html {
   color: #d3f3ec;
 }
 
+/* FORMULARIO - inputs con iconos */
 .input-con-icono .input-wrapper {
   position: relative;
 }
@@ -108,6 +112,7 @@ body, html {
   border-color: #00bfa6;
 }
 
+/* BOTONES */
 #botones {
   display: flex;
   align-items: center;
@@ -135,19 +140,116 @@ body, html {
   box-shadow: 0 0 10px #00ffcc80;
 }
 
-/* RESPONSIVE */
-@media screen and (max-width: 500px) {
-  body {
-    font-size: 80%;
+/* --- Agrupación inputs en filas y columnas --- */
+.input-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  margin-bottom: 1em;
+  justify-content: space-between;
+}
+
+.input-col {
+  flex: 1 1 48%;
+  min-width: 48%;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* --- DESKTOP (≥992px) --- */
+/* Pasos en fila, líneas visibles */
+@media (min-width: 992px) {
+  .barra-pasos {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .linea {
+    display: block;
+  }
+
+  .paso-item {
+    width: auto;
+    flex: none;
+  }
+}
+
+/* --- TABLET (600px a 991px) --- */
+/* Pasos 2 por fila, líneas ocultas */
+@media (min-width: 600px) and (max-width: 991px) {
+  .barra-pasos {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+  }
+
+  .linea {
+    display: none;
+  }
+
+  .paso-item {
+    flex: 1 1 45%;
+    text-align: center;
+  }
+
+  /* Formulario: 2 columnas x 2 filas */
+  .input-row {
+    flex-direction: row;
+  }
+
+  .input-col {
+    flex: 1 1 48%;
+    min-width: 48%;
+  }
+}
+
+/* --- MOBILE (<600px) --- */
+/* Pasos 1 por fila, líneas ocultas, formulario 1 columna */
+@media (max-width: 599px) {
+  .barra-pasos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .linea {
+    display: none;
+  }
+
+  .paso-item {
+    width: 100%;
+    text-align: center;
+  }
+
+  .bloque-pasos {
+    margin: 1em;
+    padding: 1em;
+  }
+
+  .bloque-titulo h1 {
+    font-size: 2rem;
+  }
+
+  .bloque-titulo p {
+    font-size: 1.2rem;
   }
 
   #botones {
-    padding: 1em;
+    padding-top: 2em;
     flex-direction: column;
     gap: 1em;
   }
 
   #botones a {
-    width: 80%;
+    width: 90%;
+  }
+
+  /* Formulario en 1 columna */
+  .input-row {
+    flex-direction: column;
+  }
+
+  .input-col {
+    flex: 1 1 100%;
+    min-width: 100%;
   }
 }

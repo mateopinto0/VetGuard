@@ -298,11 +298,12 @@ footer {
         font-size: 2em;
     }
 
-    .main-left{
-        margin-left: 0 ;
+    .main-left {
+        margin-left: 0;
     }
-    .main-left a{
-        margin-left: 0 ;
+
+    .main-left a {
+        margin-left: 0;
     }
 
     .main-left h1 {
