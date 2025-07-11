@@ -1,16 +1,15 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  font-family: "TikTok Sans", sans-serif;
+*{
+    font-family: "TikTok Sans", sans-serif;
 }
 
-html,
-body {
+html, body {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  height: 100%;
   background: linear-gradient(to bottom right, #011b19, #132c27, #1c6e6e);
   color: white;
+  font-family: "TikTok Sans", sans-serif;
 }
 
 body {
@@ -20,7 +19,6 @@ body {
   padding: 2em;
   min-height: 100vh;
 }
-
 
 .contenedor {
   max-width: 600px;
@@ -42,7 +40,7 @@ h1 {
   color: white;
 }
 
-h2 {
+h2{
   font-weight: 600;
 }
 
@@ -52,10 +50,10 @@ h2 {
   margin: 1em 0 2em 0;
 }
 
-.icon-exito {
+.icono-exito {
   font-size: 4rem;
   color: #00ff66;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.5em; 
 }
 
 
@@ -83,8 +81,7 @@ h2 {
   from {
     opacity: 0;
     transform: translateY(20px);
-  }
-
+  }  
   to {
     opacity: 1;
     transform: translateY(0);
@@ -126,7 +123,7 @@ h2 {
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 500px) {
   .contenedor {
     max-width: 90%;
     margin: 2em auto 0 auto;
