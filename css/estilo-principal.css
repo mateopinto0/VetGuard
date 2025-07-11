@@ -359,6 +359,10 @@ footer.footer .ubicacion iframe {
         /* Reduce tamaño base */
     }
 
+    .main-hero{
+            background: url("../img/Fondo3.png");
+    }
+
     #logo {
         width: 7em;
     }
